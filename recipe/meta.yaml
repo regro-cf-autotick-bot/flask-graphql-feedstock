@@ -1,5 +1,5 @@
 {% set name = "Flask-GraphQL" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b4e23dfd767f7028835208db0bfa7145f59467225882e6d4f560d15c09f32de8
+  sha256: 825578c044df436cd74503a38bbd31c919a90acda5e9b6e0e45736964bc5235d
 
 build:
   number: 0
