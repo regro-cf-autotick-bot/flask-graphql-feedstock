@@ -10,7 +10,7 @@ source:
   sha256: 825578c044df436cd74503a38bbd31c919a90acda5e9b6e0e45736964bc5235d
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv "
   noarch: python
 
@@ -21,12 +21,16 @@ requirements:
   run:
     - flask >=0.7.0
     - graphql-core >=2.1
-    - graphql-server-core >=1.1
+    - graphql-server-core >=1.1,<2.0.0a0
     - python
 
 test:
+  requires:
+    - pip
   imports:
     - flask_graphql
+  commands:
+    - python -m pip check
 
 about:
   home: https://github.com/graphql-python/flask-graphql
